@@ -118,5 +118,5 @@ Depending on your server specs, handling more than a few hundreds of emails per 
 
 # Run Docker
 ```
-docker run -it -d -p 25:6025 -p 465:6465 -p 587:6587 -p 143:143 -p 993:993 fakeopensmtprelay
+docker run -it -d -p 25:6025 -p 465:6465 -p 587:6587 -v /root/spam-mails:/usr/src/app/maildir fakeopensmtprelay
 ```
