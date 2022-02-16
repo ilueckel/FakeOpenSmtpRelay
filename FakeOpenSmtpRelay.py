@@ -434,11 +434,11 @@ class ConfigInEmail:
 
 	def create_new_config(self):
 		msg = self.create_new_mail()
-		ipv4 = Helpers.get_json_from_url('https://v4.ident.me/.json')['address']
+		ipv4 = Helpers.get_json_from_url('https://api.ipify.org/?format=json')['ip']
 		GlobalConfig.IPV4 = ipv4
 		ipv6 = None
 		try:
-			ipv6 = Helpers.get_json_from_url('https://v6.ident.me/.json')['address']
+			ipv6 = Helpers.get_json_from_url('https://api64.ipify.org/?format=json')['address']
 			GlobalConfig.IPV6 = ipv6
 		except:
 			# We dont do anything special if no IPv6 is found, variable is already set to None
