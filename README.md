@@ -115,3 +115,8 @@ See [FOSR_Examples.md](FOSR_Examples.md) for further examples of commands to run
 
 ### FakeOpenSmtpRelay.py works great, thanks! I now have 1'000 / 10'000 / 100'000 / 1'000'000 (mal)spams in my inbox. How do I analyse / handle that volume?
 Depending on your server specs, handling more than a few hundreds of emails per IMAP is... _delicate_. [Script FOSR_Examples.md](FOSR_Examples.md) gives examples how to explore, analyse and triage large amounts of emails. It also gives you hint how to use the interactive Python prompt in FOSR.
+
+# Run Docker
+```
+docker run -it -d -p 25:6025 -p 465:6465 -p 587:6587 -p 143:143 -p 993:993 fakeopensmtprelay
+```
